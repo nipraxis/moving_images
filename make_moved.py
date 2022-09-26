@@ -18,3 +18,6 @@ new_slice = snd.shift(orig_slice, [29, -5])
 
 np.savetxt('original_slice.txt', orig_slice)
 np.savetxt('moved_slice.txt', new_slice)
+
+new_slice2 = snd.shift(orig_slice, [-15, 3])
+np.savetxt('moved_slice2.txt', new_slice2)
