@@ -16,6 +16,9 @@ orig_slice = data[:, :, 160]
 
 new_slice = snd.shift(orig_slice, [29, -5])
 
+# Put marker into columns to show negative indexing.
+new_slice[:, -5:] = 1e-5
+
 np.savetxt('original_slice.txt', orig_slice)
 np.savetxt('moved_slice.txt', new_slice)
 
